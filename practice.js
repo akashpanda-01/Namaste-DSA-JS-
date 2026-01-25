@@ -26,7 +26,6 @@ function secondLargestNumber(num) {
 }
 console.log(secondLargestNumber([1, 2, 3, 4]));
 
-
 // function secondLargestNumber(arr){
 //     if(arr.length < 2) return "Array Should Have at Least 2 Numbers";
 //     let first = 0 , second = 0 ;
@@ -41,3 +40,16 @@ console.log(secondLargestNumber([1, 2, 3, 4]));
 //     return second === 0 ? "No Second largest Found" : second;
 // };
 // console.log(secondLargestNumber([1 ,4, 5, 6, 7, 8]));
+
+// Count Vowels in a String
+function countVowels(str) {
+  let vowels = "aeiou";
+  let count = 0;
+
+  for (let char of str.toLowerCase()) {
+    if (vowels.includes(char)) count++;
+  }
+  return count;
+}
+
+console.log(countVowels("javascript"));
