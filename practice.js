@@ -24,7 +24,7 @@ function secondLargestNumber(num) {
   }
   return secLargest;
 }
-console.log(secondLargestNumber([1, 2, 3, 4]));
+// console.log(secondLargestNumber([1, 2, 3, 4]));
 
 // function secondLargestNumber(arr){
 //     if(arr.length < 2) return "Array Should Have at Least 2 Numbers";
@@ -52,4 +52,46 @@ function countVowels(str) {
   return count;
 }
 
-console.log(countVowels("javascript"));
+// console.log(countVowels("javascript"));
+
+// Find The Largest Element in an Array
+function largestElement(arr){
+  let largest = 0;
+  for(let element of arr){
+    if(element > largest){
+      largest = element;
+    }
+  }
+  return largest;
+};
+// console.log(largestElement([1, 2, 3, 4, 5]));
+
+
+// Find The Second Largest in an Array
+function secondLargest(arr){
+  let largest = 0, secondLargest = 0;
+  for(let element of arr){
+    if(element > largest){
+      secondLargest = largest;
+      largest = element;
+    }
+  }
+  return secondLargest;
+};
+// console.log(secondLargest([1, 2, 3, 4, 5]));
+
+
+// Find The Smallest and Largest in an Array
+function findLargSmall(arr){
+  let largest = arr[0], smallest = arr[0];
+  for(let element of arr){
+    if(element > largest){
+      largest = element;
+    }
+    if(element < smallest){
+    smallest = element;
+    }
+  }
+  return {smallest, largest};
+};
+console.log(findLargSmall([2, 3, 4, 1, 5]));
