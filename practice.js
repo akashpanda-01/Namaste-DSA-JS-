@@ -94,4 +94,19 @@ function findLargSmall(arr){
   }
   return {smallest, largest};
 };
-console.log(findLargSmall([2, 3, 4, 1, 5]));
+// console.log(findLargSmall([2, 3, 4, 1, 5]).smallest);
+
+// Reverse an Array
+function reverseArray(arr){
+  let right = arr.length-1;
+  // let left = 0;
+  let revArr = [];
+  for(let i = right; i >= 0; i--){
+    // let temp = left;
+    if(i <= arr[i]){
+      revArr.push(arr[i]);
+    }
+  }
+  return revArr;
+}
+console.log(reverseArray([1, 2, 3, 4, 5]));
