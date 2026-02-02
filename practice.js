@@ -109,4 +109,34 @@ function reverseArray(arr){
   }
   return revArr;
 }
-console.log(reverseArray([1, 2, 3, 4, 5]));
+// console.log(reverseArray([1, 2, 3, 4, 5]));
+
+// Rotate An Array By k Position (left Rotation)
+function rotateArr(arr, k){
+  let n = arr.length;
+  k = k % n;
+  let rotated = [];
+  for(let i = k; i < n; i++){
+    rotated.push(arr[i]);
+  }
+  for(let i = 0; i < k; i++){
+    rotated.push(arr[i]);
+  }
+  return rotated;
+};
+// console.log(rotateArr([1, 2, 3, 4, 5], 2));
+
+// Right Rotation
+function rigthRotationArr(arr, k){
+  let n = arr.length -1;
+  k = k % n;
+  let rotatedArr = [];
+  for(let i = n; i > k; i--){
+    rotatedArr.push(arr[i]);
+  };
+  for(let i = 0; i <= k; i++){
+    rotatedArr.push(arr[i]);
+  };
+  return rotatedArr;
+};
+// console.log(rigthRotationArr([1, 2, 3, 4, 5], 2));
