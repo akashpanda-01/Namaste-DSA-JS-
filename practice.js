@@ -140,3 +140,74 @@ function rigthRotationArr(arr, k){
   return rotatedArr;
 };
 // console.log(rigthRotationArr([1, 2, 3, 4, 5], 2));
+
+// Remove Duplicates in an Array
+function removeDuplicate(arr){
+  let unique = [arr[0]]
+  for(let i = 0; i < arr.length; i++){
+    if(!unique.includes(arr[i])){
+      unique.push(arr[i]);
+    }
+  };
+  // console.log(unique);
+};
+removeDuplicate([1,1,2,3,4,5]);
+
+// Remove Duplicates in Unshorted Array
+function removeUnshortedDuplicate(arr){
+  let seen = {};
+  let result = [];
+  for(let num of arr){
+    if(!seen[num]){
+      seen[num] = true;
+      result.push(num);
+    };
+  };
+  return result;
+};
+// console.log(removeUnshortedDuplicate([1, 4, 2, 3, 5, 1, 2]));
+
+// Find Frequency Of Each Element
+function findFrequency(arr){
+  let frequency = {};
+  for(let i = 0; i< arr.length; i++){
+    frequency[arr[i]] = (frequency[arr[i]] || 0) + 1;
+  }
+  return frequency;
+};
+// console.log(findFrequency([1, 2, 1, 2, 3, 4, 3, 5]));
+
+function findFrequency1(arr){
+  let frequency = {};
+  for(let i = 0; i < arr.length; i++){
+    if(frequency[arr[i]]){
+      frequency[arr[i]]++;
+    } else {
+      frequency[arr[i]] = 1;
+    }
+  }
+  return frequency;
+};
+// console.log(findFrequency1[1, 2, 3, 4, 1, 2, 3]);
+
+// Checking Eligibility
+function isEligible(age){
+  if(age < 18){
+    console.log("Not Eligible");
+  }
+  else {
+    console.log("Eligible");
+  }
+};
+// isEligible(17);
+
+// Checking Number is Even Or Odd
+function isEvenOdd(num){
+  let rem = num % 2;
+  if(rem === 0){
+    console.log("Even Number");
+  } else {
+    console.log("Odd Number");
+  }
+};
+// isEvenOdd(23);
