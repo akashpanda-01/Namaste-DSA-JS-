@@ -1,11 +1,11 @@
 // Print All Even Numbers in An Array
-let arr = [10, 2, 3, 5, 6, 7, 8];
-let outPut = [];
-for (let i = 0; i <= arr.length; i++) {
-  if (arr[i] % 2 === 0) {
-    outPut.push(arr[i]);
-  }
-}
+// let arr = [10, 2, 3, 5, 6, 7, 8];
+// let outPut = [];
+// for (let i = 0; i <= arr.length; i++) {
+//   if (arr[i] % 2 === 0) {
+//     outPut.push(arr[i]);
+//   }
+// }
 // console.log(outPut);
 
 // Find The Second Largest Number In An Array
@@ -211,3 +211,48 @@ function isEvenOdd(num){
   }
 };
 // isEvenOdd(23);
+
+// ---------------LOOP---------------------
+// for(let i = 0; i < 10; i++){
+//   console.log("Hello World");
+// }
+
+
+
+// for(let i = 0; i <= 4; i = i + 1){
+//   console.log("Hello World", " ", i);
+// }
+
+// for(let i = 2; i < 9; i = i +2){
+//   console.log("Hello World", " " + i);
+// }
+
+// // reverse loop
+// for(let i = 5; i > 0; i = i - 1){
+//   console.log("Hello World");
+// }
+
+// Function Inside Loop
+function greet(){
+  console.log("Hello World");
+};
+for(let i = 0; i < 5; i++ ){
+  // greet();
+};
+
+// Array With Loop
+let arr1 = [10, 2, 3, 1, 4, 5];
+for(let i = 0; i <= arr1.length-1; i++){
+  // console.log(arr1[i]);
+};
+
+// Print All The Even Numbers In the Array
+function arrEvenNums(arr){
+  for(let i = 0; i <= arr.length; i++){
+    let isEven = arr[i] % 2;
+    if(isEven === 0){
+      console.log(arr[i]);
+    }
+  }
+}
+arrEvenNums([2, 1, 2, 3, 4, 5, 6]);
