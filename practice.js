@@ -255,4 +255,83 @@ function arrEvenNums(arr){
     }
   }
 }
-arrEvenNums([2, 1, 2, 3, 4, 5, 6]);
+// arrEvenNums([2, 1, 2, 3, 4, 5, 6]);
+
+// While Loop
+function whileLoop(){
+  let i = 0;
+  while(i < 5){
+    console.log("Hello World");
+    console.log(i);
+    i++;
+    console.log(i);
+  }
+  console.log(i);
+  
+};
+// whileLoop();
+
+// Write a Functioon That Searches Of An Element In an Array and Returns the index, if The element is not present then just return -1
+function searchIndex(arr, searchEle){
+  for(let i = 0; i <= arr.length -1; i++){
+    if(searchEle === arr[i]) return i;
+  }
+  return -1;
+};
+let result = searchIndex([1, 2, 3, 4, 5], 1);
+// console.log(result);
+
+
+// Write a Function That return the number of negative numbers in an array
+function findNegativeNum(arr){
+  let count = 0;
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] < 0){
+      count++
+    };
+  }
+  return count;
+};
+// console.log(findNegativeNum([1, -1, -2, 3, -3, -5]));
+
+// Write a Function That Returns The Largest Number In an Array
+function findLargsetNum(arr){
+  let largest = null;
+  for(let i = 0; i < arr.length; i++){
+    if(largest < arr[i]){
+      largest = arr[i];
+    };
+  };
+  return largest;
+};
+// console.log(findLargsetNum([10, 1, 2, 3, 4, 5]));
+
+//  Write a Function That Returns The Minimum Number In an Array
+function findMinimum(arr){
+  let smallest = Infinity;
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] < smallest){
+      smallest = arr[i];
+    };
+  }
+  return smallest;
+};
+// console.log(findMinimum([1, -2, 10, 3, -1]));
+
+// Find The Second Largest Number In Array
+function findSecondLargest(arr){
+  let largest = -Infinity;
+  let secondLargest = -Infinity;
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] > largest){
+      secondLargest = largest;
+      largest = arr[i];
+    } else if(arr[i] > secondLargest){
+      secondLargest = arr[i];
+    };
+  };
+  return secondLargest;
+};
+// console.log(findSecondLargest([7, 1, 2, 3, 4, 5, 6, 8]));
+
+// 
