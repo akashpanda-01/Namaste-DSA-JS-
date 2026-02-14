@@ -334,4 +334,54 @@ function findSecondLargest(arr){
 };
 // console.log(findSecondLargest([7, 1, 2, 3, 4, 5, 6, 8]));
 
-// 
+// Loops Inside Loops
+// for(let i = 0; i < 5; i++){
+//   console.log("Outside Loop");
+//   for(let j = 0; j< 5; j++){
+//     console.log("Inner Loop");
+//   };
+// };
+
+// for(let i = 0; i < 5; i++){
+//   for(let j = 0; j <= i; j++){
+//     console.log(i , j);
+//   };
+// };
+
+// for(let i = 0; i < 3; i++){
+//   for(let j = i; j >= 0; j--){
+//     console.log(i , j);
+//   };
+// };
+
+
+// for(let i = 5; i > 0; i--){
+//   for(let j = 0; j < i; j++){
+//     console.log(i , j);
+//   };
+// };
+
+// Star Pattern Question Practice
+// for(let i = 0; i < 4; i++){
+//   let row = "";
+//   for(let j = 0; j < 4; j++){
+//     row = row + " *";
+//   }
+//   console.log(row);
+// }
+
+// for(let i = 4; i > 0; i--){
+//   let row = "";
+//   for(let j = 0; j < i; j++){
+//     row = row + " *";
+//   };
+//   console.log(row);
+// };
+
+// for(let i = 1; i < 4; i++){
+//   let row = "";
+//   for(let j = 0; j < i + 1; j++){
+//     row = row + " *";
+//   };
+//   console.log(row);
+// };
