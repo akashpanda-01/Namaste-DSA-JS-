@@ -439,29 +439,85 @@ function findSecondLargest(arr){
 //   console.log(row);
 // }
 
-let toggle = 1;
-for(let i = 0; i<5; i++){
-  let row = ""; 
-  for(let j = 0; j < i + 1; j++){
-    row = row + toggle;
-    if(toggle === 1){
-      toggle = 0;
-    } else {
-      toggle = 1;
-    }
-  };
-  console.log(row);
-}
+// let toggle = 1;
+// for(let i = 0; i<5; i++){
+//   let row = ""; 
+//   for(let j = 0; j < i + 1; j++){
+//     row = row + toggle;
+//     if(toggle === 1){
+//       toggle = 0;
+//     } else {
+//       toggle = 1;
+//     }
+//   };
+//   console.log(row);
+// }
 
-for(let i = 0; i< 5; i++){
-  let row = "", toggle = 1;
-  for(let j = 0; j < i +1; j++){
-    row = row + toggle;
-    if(toggle === 1){
-      toggle = 0;
-    }else {
-      toggle = 1;
-    };
+// for(let i = 0; i< 5; i++){
+//   let row = "", toggle = 1;
+//   for(let j = 0; j < i +1; j++){
+//     row = row + toggle;
+//     if(toggle === 1){
+//       toggle = 0;
+//     }else {
+//       toggle = 1;
+//     };
+//   };
+//   console.log(row);
+// };
+
+// Write a Functin That returns the count of digits in a number
+function countNum(num){
+  let count = 0;
+  while(num > 0){
+    num = Math.floor(num / 10);
+    count++;
   };
-  console.log(row);
+  return count;
 };
+// console.log(countNum(123));
+
+// function isPalindrome(x){
+//   let num = x;
+//   let rev = 0;
+//   while(num > 0){
+//     let rem = num % 10;
+//     rev = (10*rev) + rem;
+//     num = Math.floor(num / 10);
+//   }
+//   if(rev == x){
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// console.log(isPalindrome(121));
+
+function countDigit(x){
+  let count = 0;
+  let num = x;
+  while(x > 0){
+    num = Math.floor(num / 10);
+    count++;
+  };
+  console.log(count);
+};
+// countDigit(123);
+
+function isPalindrome(x){
+  let rev = 0, num = Math.abs(x);
+  if(num < 9){
+    return "Number Is Single Digit";
+  };
+  while(num > 0){
+    let rem = num % 10;
+    rev = (10*rev) + rem;
+    num = Math.floor(num/10);
+  };
+  if(rev == x){
+    return "Palindrome";
+  } else {
+    return "Not Palindrome";
+  };
+};
+console.log(isPalindrome(1));
