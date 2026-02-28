@@ -55,55 +55,55 @@ function countVowels(str) {
 // console.log(countVowels("javascript"));
 
 // Find The Largest Element in an Array
-function largestElement(arr){
+function largestElement(arr) {
   let largest = 0;
-  for(let element of arr){
-    if(element > largest){
+  for (let element of arr) {
+    if (element > largest) {
       largest = element;
     }
   }
   return largest;
-};
+}
 // console.log(largestElement([1, 2, 3, 4, 5]));
 
-
 // Find The Second Largest in an Array
-function secondLargest(arr){
-  let largest = 0, secondLargest = 0;
-  for(let element of arr){
-    if(element > largest){
+function secondLargest(arr) {
+  let largest = 0,
+    secondLargest = 0;
+  for (let element of arr) {
+    if (element > largest) {
       secondLargest = largest;
       largest = element;
     }
   }
   return secondLargest;
-};
+}
 // console.log(secondLargest([1, 2, 3, 4, 5]));
 
-
 // Find The Smallest and Largest in an Array
-function findLargSmall(arr){
-  let largest = arr[0], smallest = arr[0];
-  for(let element of arr){
-    if(element > largest){
+function findLargSmall(arr) {
+  let largest = arr[0],
+    smallest = arr[0];
+  for (let element of arr) {
+    if (element > largest) {
       largest = element;
     }
-    if(element < smallest){
-    smallest = element;
+    if (element < smallest) {
+      smallest = element;
     }
   }
-  return {smallest, largest};
-};
+  return { smallest, largest };
+}
 // console.log(findLargSmall([2, 3, 4, 1, 5]).smallest);
 
 // Reverse an Array
-function reverseArray(arr){
-  let right = arr.length-1;
+function reverseArray(arr) {
+  let right = arr.length - 1;
   // let left = 0;
   let revArr = [];
-  for(let i = right; i >= 0; i--){
+  for (let i = right; i >= 0; i--) {
     // let temp = left;
-    if(i <= arr[i]){
+    if (i <= arr[i]) {
       revArr.push(arr[i]);
     }
   }
@@ -112,112 +112,109 @@ function reverseArray(arr){
 // console.log(reverseArray([1, 2, 3, 4, 5]));
 
 // Rotate An Array By k Position (left Rotation)
-function rotateArr(arr, k){
+function rotateArr(arr, k) {
   let n = arr.length;
   k = k % n;
   let rotated = [];
-  for(let i = k; i < n; i++){
+  for (let i = k; i < n; i++) {
     rotated.push(arr[i]);
   }
-  for(let i = 0; i < k; i++){
+  for (let i = 0; i < k; i++) {
     rotated.push(arr[i]);
   }
   return rotated;
-};
+}
 // console.log(rotateArr([1, 2, 3, 4, 5], 2));
 
 // Right Rotation
-function rigthRotationArr(arr, k){
-  let n = arr.length -1;
+function rigthRotationArr(arr, k) {
+  let n = arr.length - 1;
   k = k % n;
   let rotatedArr = [];
-  for(let i = n; i > k; i--){
+  for (let i = n; i > k; i--) {
     rotatedArr.push(arr[i]);
-  };
-  for(let i = 0; i <= k; i++){
+  }
+  for (let i = 0; i <= k; i++) {
     rotatedArr.push(arr[i]);
-  };
+  }
   return rotatedArr;
-};
+}
 // console.log(rigthRotationArr([1, 2, 3, 4, 5], 2));
 
 // Remove Duplicates in an Array
-function removeDuplicate(arr){
-  let unique = [arr[0]]
-  for(let i = 0; i < arr.length; i++){
-    if(!unique.includes(arr[i])){
+function removeDuplicate(arr) {
+  let unique = [arr[0]];
+  for (let i = 0; i < arr.length; i++) {
+    if (!unique.includes(arr[i])) {
       unique.push(arr[i]);
     }
-  };
+  }
   // console.log(unique);
-};
-removeDuplicate([1,1,2,3,4,5]);
+}
+removeDuplicate([1, 1, 2, 3, 4, 5]);
 
 // Remove Duplicates in Unshorted Array
-function removeUnshortedDuplicate(arr){
+function removeUnshortedDuplicate(arr) {
   let seen = {};
   let result = [];
-  for(let num of arr){
-    if(!seen[num]){
+  for (let num of arr) {
+    if (!seen[num]) {
       seen[num] = true;
       result.push(num);
-    };
-  };
+    }
+  }
   return result;
-};
+}
 // console.log(removeUnshortedDuplicate([1, 4, 2, 3, 5, 1, 2]));
 
 // Find Frequency Of Each Element
-function findFrequency(arr){
+function findFrequency(arr) {
   let frequency = {};
-  for(let i = 0; i< arr.length; i++){
+  for (let i = 0; i < arr.length; i++) {
     frequency[arr[i]] = (frequency[arr[i]] || 0) + 1;
   }
   return frequency;
-};
+}
 // console.log(findFrequency([1, 2, 1, 2, 3, 4, 3, 5]));
 
-function findFrequency1(arr){
+function findFrequency1(arr) {
   let frequency = {};
-  for(let i = 0; i < arr.length; i++){
-    if(frequency[arr[i]]){
+  for (let i = 0; i < arr.length; i++) {
+    if (frequency[arr[i]]) {
       frequency[arr[i]]++;
     } else {
       frequency[arr[i]] = 1;
     }
   }
   return frequency;
-};
+}
 // console.log(findFrequency1[1, 2, 3, 4, 1, 2, 3]);
 
 // Checking Eligibility
-function isEligible(age){
-  if(age < 18){
+function isEligible(age) {
+  if (age < 18) {
     console.log("Not Eligible");
-  }
-  else {
+  } else {
     console.log("Eligible");
   }
-};
+}
 // isEligible(17);
 
 // Checking Number is Even Or Odd
-function isEvenOdd(num){
+function isEvenOdd(num) {
   let rem = num % 2;
-  if(rem === 0){
+  if (rem === 0) {
     console.log("Even Number");
   } else {
     console.log("Odd Number");
   }
-};
+}
 // isEvenOdd(23);
 
 // ---------------LOOP---------------------
 // for(let i = 0; i < 10; i++){
 //   console.log("Hello World");
 // }
-
-
 
 // for(let i = 0; i <= 4; i = i + 1){
 //   console.log("Hello World", " ", i);
@@ -233,24 +230,24 @@ function isEvenOdd(num){
 // }
 
 // Function Inside Loop
-function greet(){
+function greet() {
   console.log("Hello World");
-};
-for(let i = 0; i < 5; i++ ){
+}
+for (let i = 0; i < 5; i++) {
   // greet();
-};
+}
 
 // Array With Loop
 let arr1 = [10, 2, 3, 1, 4, 5];
-for(let i = 0; i <= arr1.length-1; i++){
+for (let i = 0; i <= arr1.length - 1; i++) {
   // console.log(arr1[i]);
-};
+}
 
 // Print All The Even Numbers In the Array
-function arrEvenNums(arr){
-  for(let i = 0; i <= arr.length; i++){
+function arrEvenNums(arr) {
+  for (let i = 0; i <= arr.length; i++) {
     let isEven = arr[i] % 2;
-    if(isEven === 0){
+    if (isEven === 0) {
       console.log(arr[i]);
     }
   }
@@ -258,80 +255,78 @@ function arrEvenNums(arr){
 // arrEvenNums([2, 1, 2, 3, 4, 5, 6]);
 
 // While Loop
-function whileLoop(){
+function whileLoop() {
   let i = 0;
-  while(i < 5){
+  while (i < 5) {
     console.log("Hello World");
     console.log(i);
     i++;
     console.log(i);
   }
   console.log(i);
-  
-};
+}
 // whileLoop();
 
 // Write a Functioon That Searches Of An Element In an Array and Returns the index, if The element is not present then just return -1
-function searchIndex(arr, searchEle){
-  for(let i = 0; i <= arr.length -1; i++){
-    if(searchEle === arr[i]) return i;
+function searchIndex(arr, searchEle) {
+  for (let i = 0; i <= arr.length - 1; i++) {
+    if (searchEle === arr[i]) return i;
   }
   return -1;
-};
+}
 let result = searchIndex([1, 2, 3, 4, 5], 1);
 // console.log(result);
 
-
 // Write a Function That return the number of negative numbers in an array
-function findNegativeNum(arr){
+function findNegativeNum(arr) {
   let count = 0;
-  for(let i = 0; i < arr.length; i++){
-    if(arr[i] < 0){
-      count++
-    };
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < 0) {
+      count++;
+    }
   }
   return count;
-};
+}
 // console.log(findNegativeNum([1, -1, -2, 3, -3, -5]));
 
 // Write a Function That Returns The Largest Number In an Array
-function findLargsetNum(arr){
+function findLargsetNum(arr) {
   let largest = null;
-  for(let i = 0; i < arr.length; i++){
-    if(largest < arr[i]){
+  for (let i = 0; i < arr.length; i++) {
+    if (largest < arr[i]) {
       largest = arr[i];
-    };
-  };
+    }
+  }
   return largest;
-};
+}
 // console.log(findLargsetNum([10, 1, 2, 3, 4, 5]));
 
 //  Write a Function That Returns The Minimum Number In an Array
-function findMinimum(arr){
+function findMinimum(arr) {
   let smallest = Infinity;
-  for(let i = 0; i < arr.length; i++){
-    if(arr[i] < smallest){
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < smallest) {
       smallest = arr[i];
-    };
+    }
   }
   return smallest;
-};
+}
 // console.log(findMinimum([1, -2, 10, 3, -1]));
 
 // Find The Second Largest Number In Array
-function findSecondLargest(arr){
+function findSecondLargest(arr) {
   let largest = -Infinity;
   let secondLargest = -Infinity;
-  for(let i = 0; i < arr.length; i++){
-    if(arr[i] > largest){
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > largest) {
       secondLargest = largest;
       largest = arr[i];
-    } else if(arr[i] > secondLargest){
+    } else if (arr[i] > secondLargest) {
       secondLargest = arr[i];
-    };
-  };
+    }
+  }
   return secondLargest;
-};
+}
 // console.log(findSecondLargest([7, 1, 2, 3, 4, 5, 6, 8]));
 
 // Loops Inside Loops
@@ -353,7 +348,6 @@ function findSecondLargest(arr){
 //     console.log(i , j);
 //   };
 // };
-
 
 // for(let i = 5; i > 0; i--){
 //   for(let j = 0; j < i; j++){
@@ -408,7 +402,7 @@ function findSecondLargest(arr){
 //     row = row + (i);
 //   };
 //   console.log(row);
-  
+
 //}
 
 // for(let i = 5; i > 1; i--){
@@ -441,7 +435,7 @@ function findSecondLargest(arr){
 
 // let toggle = 1;
 // for(let i = 0; i<5; i++){
-//   let row = ""; 
+//   let row = "";
 //   for(let j = 0; j < i + 1; j++){
 //     row = row + toggle;
 //     if(toggle === 1){
@@ -467,14 +461,14 @@ function findSecondLargest(arr){
 // };
 
 // Write a Functin That returns the count of digits in a number
-function countNum(num){
+function countNum(num) {
   let count = 0;
-  while(num > 0){
+  while (num > 0) {
     num = Math.floor(num / 10);
     count++;
-  };
+  }
   return count;
-};
+}
 // console.log(countNum(123));
 
 // function isPalindrome(x){
@@ -493,31 +487,47 @@ function countNum(num){
 // }
 // console.log(isPalindrome(121));
 
-function countDigit(x){
+function countDigit(x) {
   let count = 0;
   let num = x;
-  while(x > 0){
+  while (x > 0) {
     num = Math.floor(num / 10);
     count++;
-  };
+  }
   console.log(count);
-};
+}
 // countDigit(123);
 
-function isPalindrome(x){
-  let rev = 0, num = Math.abs(x);
-  if(num < 9){
+function isPalindrome(x) {
+  let rev = 0,
+    num = Math.abs(x);
+  if (num < 9) {
     return "Number Is Single Digit";
-  };
-  while(num > 0){
+  }
+  while (num > 0) {
     let rem = num % 10;
-    rev = (10*rev) + rem;
-    num = Math.floor(num/10);
-  };
-  if(rev == x){
+    rev = 10 * rev + rem;
+    num = Math.floor(num / 10);
+  }
+  if (rev == x) {
     return "Palindrome";
   } else {
     return "Not Palindrome";
-  };
-};
-console.log(isPalindrome(1));
+  }
+}
+// console.log(isPalindrome(1));
+
+function reverseInt(num) {
+  let rev = 0;
+  let copy = num;
+  num = Math.abs(num);
+  let limit = Math.pow(2, 31);
+  while (num > 0) {
+    let rem = num % 10;
+    rev = 10 * rev + rem;
+    num = Math.floor(num / 10);
+  }
+  if (rev < -limit || rev > limit) return 0;
+  return copy < 0 ? -rev : rev;
+}
+console.log(reverseInt(-123));
