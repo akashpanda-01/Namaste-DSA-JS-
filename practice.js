@@ -530,4 +530,4 @@ function reverseInt(num) {
   if (rev < -limit || rev > limit) return 0;
   return copy < 0 ? -rev : rev;
 }
-console.log(reverseInt(-123));
+// console.log(reverseInt(-123));
