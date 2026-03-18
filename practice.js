@@ -531,3 +531,18 @@ function reverseInt(num) {
   return copy < 0 ? -rev : rev;
 }
 // console.log(reverseInt(-123));
+
+
+// Remove Duplicates
+function findDuplicates(a){
+  let x = 0;
+  for(let i = 0; i < a.length; i++){
+    if(a[i] > a[x]){
+      x = x + 1;
+      a[x] = a[i];
+    }
+  }
+  console.log(a);
+  return (x + 1);
+};
+console.log(findDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
