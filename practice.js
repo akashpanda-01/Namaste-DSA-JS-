@@ -626,3 +626,4 @@ function reverseStr(s){
   return s;
 };
 console.log(reverseStr(["h", "s", "a", "k", "A"]));
+console.log(findDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
