@@ -542,7 +542,87 @@ function findDuplicates(a){
       a[x] = a[i];
     }
   }
-  console.log(a);
-  return (x + 1);
+  return (x + 1), a;
 };
-console.log(findDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
+// console.log(findDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
+
+
+function findDuplicate(arr){
+  let x = 0;
+  for(let i = 1; i < arr.length; i++){
+    if(arr[i] !== arr[x]){
+      x = x + 1;
+      arr[x] = arr[i];
+    };
+  };
+  return[ x, arr];
+};
+// console.log(findDuplicate([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
+
+function removeDuplicatess(arr){
+  let pointer = 0;
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] > arr[pointer]){
+      pointer++;
+      arr[pointer] = arr[i];
+    };
+  };
+  return [pointer, arr];
+};
+let resultt = removeDuplicatess([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]);
+// console.log(resultt);
+
+// Remove Element
+function removeElement(arr){
+  let val = 3;
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] === val){
+      arr.splice(i, 1);
+    };
+  };
+  return arr;
+};
+// console.log(removeElement([3, 2, 2, 3]));
+
+function removeElements(arr){
+  let x = 0;
+  let val = 3;
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] !== val){
+      arr[x] = arr[i];
+      x = x + 1;
+    };
+  };
+  return [ arr, x ];
+};
+// console.log(removeElements([3, 1, 2, 3, 5, 6, 8, 3]));
+
+// Reverse String
+function reverseString(s){
+  let i = 0;
+  let j = s.length-1;
+  while(i < j){
+    if(s[i] !== s[j]){
+      let temp = s[i];
+      s[i] = s[j];
+      s[j] = temp;
+    };
+    i++;
+    j--;
+  };
+  return s;
+};
+// console.log(reverseString(["h", "s", "a", "k", "A"]));
+
+function reverseStr(s){
+  let n = s.length;
+  for(let i = 0; i < n/2; i++){
+    if(s[i] !== s[n-1-i]){
+      let temp = s[i];
+      s[i] = s[n-1-i];
+      s[n-1-i] = temp;
+    };
+  };
+  return s;
+};
+console.log(reverseStr(["h", "s", "a", "k", "A"]));
